@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html style="border:25px solid MediumSeaGreen;">
+<head Style="font-family:VCR O SD Mono;text-color:orange">
+<title>Pineapple Clicker</title>
+
+	<script>
+		let inc = 1;
+		score=0;
+		setInterval(CPS, 1000);
+		price = 25;
+			function CPS() {
+			score += inc;
+			document.getElementById("ScoreText").innerHTML = (score.toFixed(0)).toString();
+			}
+		function negauto() {
+			document.getElementById('ScoreText').innerHTML = score.toString();
+			if (score >= price){
+			score -= price;
+			inc += 1;
+			price *= 1.2;
+			document.getElementById("pricetext").innerHTML = (price.toFixed(2)).toString();
+			}}
+		 
+		function autoclicker() {
+            score += 1;
+            document.getElementById('ScoreText').textContent = score;
+			
+					}
+					
+            function run(){
+					score +=1;
+					document.getElementById("ScoreText").innerHTML = (score.toFixed(0)).toString();
+					}
+	</script>
+</head>
+<body Style="background-color:Purple;text-align:center;">
+	<!--First Name:<br>
+	<!--<input type='text' id="firstname"><br>
+	Surname:<br>
+	<input type='text' id="surname"><br>
+	Dream Job:<br>
+	//<input type='text' id="job"><br>
+	<br> -->
+	<!--<input type="button" value="HIT" onclick="run()">-->
+	<img src="Pine_Apple_Cookie_Clicker.PNG" height="550px" width="550px" onclick="run()"></img>
+	<img src="Auto Clicker.PNG" height="200" width="200" onclick="negauto()" onclick="autoclicker()">
+	<div>
+        <h1 style="font-size:60px;color:#ffeb99;text-align:center;">It costs  <span id="pricetext">0</span> Pineapple Slices!</h1>
+    </div>	
+	<div>
+        <h1 style="font-size:60px;border:9px solid Black;color:#ffeb99">!You have  <span id="ScoreText">0</span> Pineapple Slices!</h1>
+    </div>
+	
+	<marquee><h1 style="text-color:yellow;"> PINE APPLES FOR LIFE</h1> <img src="BARNER PINEAPPLE.PNG" height="180" width="180"></marquee>
+</body>
+</html>
